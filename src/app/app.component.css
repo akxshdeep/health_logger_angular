@@ -1,0 +1,186 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Add or update this in your CSS */
+.rocket-container {
+   /* Display the container inline with text */
+  position: relative;
+  height: auto;
+  width: auto; /* Let the width adjust based on image size */
+  margin: auto; /* Add some spacing between logo and text */
+}
+
+
+#rocket {
+  width: 60px; /* Adjust as needed */
+  height: 60px; /* Adjust as needed */
+}
+
+/* Rest of your existing CSS styles... */
+
+
+/* Toolbar styles */
+.toolbar {
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 40px;
+}
+
+.toolbar span {
+  font-size: 24px;
+}
+
+.toolbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.toolbar li {
+  margin: 0 15px;
+}
+
+.toolbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.toolbar a:hover {
+  color: #f0f0f0;
+}
+
+/* Content container */
+.content {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Highlight card styles */
+.highlight-card {
+  background-color: #ef5350;
+  color: rgb(141, 67, 67);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animated underline on card hover */
+.highlight-card:hover span {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.highlight-card:hover span::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: -6px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.highlight-card:hover span::before {
+  transform: scaleX(1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .highlight-card {
+    max-width: 100%;
+    margin: 20px 10px;
+  }
+}
+
+/* Additional Bootstrap element styling */
+.btn-primary {
+  background-color: #1976d2;
+  border-color: #1976d2;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f7f7f7;
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #1976d2;
+  border-bottom: 3px solid #1565c0;
+  
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f0f0f0;
+}
